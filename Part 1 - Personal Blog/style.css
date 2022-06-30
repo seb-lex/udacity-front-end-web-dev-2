@@ -169,6 +169,12 @@ button {
     text-align: left;  
 }
 
+/* post page */
+article > p {
+    text-indent: 20px;
+    margin-bottom: 10px;
+}
+
 /* responsive */
 
 @media(max-width: 768px) {
