@@ -95,3 +95,37 @@ ul {
 .header img {
     margin-left: 10px;
 }
+
+/* content area */
+.content {
+    max-width: 960px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.content a {
+    color: white;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: lightblue;
+}
+
+.card {
+    background-color: #0a51cc;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0, 0.6)
+}
+
+button {
+    border-radius: 5px;
+    background-color: lightblue;
+    border-color: white;
+    padding: 3px;
+    margin-top: 5px;
+}
