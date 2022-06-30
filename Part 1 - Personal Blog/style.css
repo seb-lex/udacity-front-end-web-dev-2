@@ -1,5 +1,4 @@
 /* base styles */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto&display=swap');
 
 * {
@@ -181,7 +180,6 @@ article > p {
 }
 
 /* responsive */
-
 @media(max-width: 768px) {
     .header .container {
         flex-direction: column;
