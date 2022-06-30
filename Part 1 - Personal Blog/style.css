@@ -82,6 +82,7 @@ ul {
 
 .header img {
     max-width: 400px;
+    border-radius: 5px;
 }
 
 .header .container {
@@ -99,9 +100,13 @@ ul {
 /* content area */
 .content {
     max-width: 960px;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 80% 20%;
+}
+
+.cards {
+    margin: 0px;
+    padding: 0px;
 }
 
 .content a {
@@ -117,7 +122,7 @@ ul {
     background-color: #0a51cc;
     color: white;
     border-radius: 10px;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     padding: 15px 20px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0, 0.6)
 }
@@ -128,4 +133,27 @@ button {
     border-color: white;
     padding: 3px;
     margin-top: 5px;
+}
+
+/* profile */
+.profile {
+    background-color: darkblue;
+    /* max-height: 200px; */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.profile div {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.profile ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
 }
