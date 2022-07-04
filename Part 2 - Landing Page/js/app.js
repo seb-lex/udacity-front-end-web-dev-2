@@ -55,6 +55,69 @@ const navMenu = () => {
 navMenu();
 
 // Add class 'active' to section when near top of viewport
+// const addActiveClass = (section) => {
+//     section.classList.add('your-active-class');
+// };
+
+// const removeActiveClass = (section) => {
+//     section.classList.remove('your-active-class');
+// };
+
+
+// const activateSection = () => {
+//     sections.forEach(section => {
+    
+//         const sectionTop = section.offsetTop;
+//         console.log(offsetTop);
+
+//     if (bound.top <= 0 && bound.bottom >= 0) {
+//         console.log('section in view');
+//         section.style.background = 'red';
+//         addActiveClass();
+//     } else {
+//         console.log('section out of view');
+//         section.style.background = 'blue';
+//         removeActiveClass();
+//     };
+// });
+// }
+
+
+// window.addEventListener('click', activateSection());
+
+const sect1 = document.querySelector('#section1');
+const sect2 = document.querySelector('#section2');
+const sect3 = document.querySelector('#section3');
+
+window.addEventListener('scroll', () => {
+    const bound = sect1.getBoundingClientRect();
+if (bound.top <= 0 && bound.bottom >= 0) {
+    sect1.classList.add('your-active-class');
+} else {
+    sect1.classList.remove('your-active-class');
+};
+})
+
+window.addEventListener('scroll', () => {
+    const bound = sect2.getBoundingClientRect();
+if (bound.top <= 0 && bound.bottom >= 0) {
+    sect2.classList.add('your-active-class');
+} else {
+    sect2.classList.remove('your-active-class');
+};
+})
+
+window.addEventListener('scroll', () => {
+    const bound = sect3.getBoundingClientRect();
+if (bound.top <= 0 && bound.bottom >= 0) {
+    sect3.classList.add('your-active-class');
+} else {
+    sect3.classList.remove('your-active-class');
+};
+})
+
+
+
 
 
 // Scroll to anchor ID using scrollTO event
