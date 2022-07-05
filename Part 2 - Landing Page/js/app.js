@@ -86,6 +86,18 @@ if (bound.top <= 0 && bound.bottom >= 0) {
 };
 })
 
+// attempt to refactor above code
+// window.addEventListener('scroll', function (e) {
+//     const sect = document.querySelector(`section[data-nav="${e}"]`);
+//     // const bound = sect.getBoundingClientRect();
+//     console.log(e);
+//     // if (bound.top <= 0 && bound.bottom >= 0) {
+//     //     sect.classList.add('your-active-class');
+//     // } else {
+//     //     sect.classList.remove('your-active-class');
+//     // };
+// });
+
 
 
 
