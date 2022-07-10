@@ -17,15 +17,22 @@
  * Comments should be present at the beginning of each procedure and class.
  * Great to have comments before crucial code sections within the procedure.
 */
+// Define Global Variables
+const ul = document.querySelector('#navbar__list');
+const sect1 = document.querySelector('#section1');
+const sect2 = document.querySelector('#section2');
+const sect3 = document.querySelector('#section3');
 
-/**
- * Define Global Variables
- * 
-*/
-const navigation = document.getElementById('navbar__list');
-const sections = document.querySelectorAll('section');
+// build navigation links
+const link1 = `<li><a class="menu__link" href="#${sect1.id}">${sect1.dataset.nav}</a></li>`;
+const link2 = `<li><a class="menu__link" href="#${sect2.id}">${sect2.dataset.nav}</a></li>`;
+const link3 = `<li><a class="menu__link" href="#${sect3.id}">${sect3.dataset.nav}</a></li>`;
 
+// capture nav links in array
+const linkArr = [link1, link2, link3];
 
+// add array to ul element
+ul.innerHTML = linkArr;
 
 /**
  * End Global Variables
