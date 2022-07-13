@@ -1,52 +1,21 @@
 /**
- * 
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
  * scrolls to anchors from navigation,
  * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
 */
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-// Define Global Variables
 const ul = document.querySelector('#navbar__list');
-const sect1 = document.querySelector('#section1');
-const sect2 = document.querySelector('#section2');
-const sect3 = document.querySelector('#section3');
+const sections = document.querySelectorAll('section');
 
-// build navigation links
-const link1 = `<li><a class="menu__link" href="#${sect1.id}">${sect1.dataset.nav}</a></li>`;
-const link2 = `<li><a class="menu__link" href="#${sect2.id}">${sect2.dataset.nav}</a></li>`;
-const link3 = `<li><a class="menu__link" href="#${sect3.id}">${sect3.dataset.nav}</a></li>`;
+// build nav links
+const links = [
+    { id: '#section1', text: 'Section 1'},
+    { id: '#section2', text: 'Section 2'},
+    { id: '#section3', text: 'Section 3'},   
+];
 
-// capture nav links in array
-const linkArr = [link1, link2, link3];
-
-// add array to ul element
-ul.innerHTML = linkArr;
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
+ul.innerHTML = links.map(link => `<li><a class="menu__link" href=${link.id}>${link.text}</a></li>`); 
 
 // build the nav
 const navMenu = () => {
@@ -60,6 +29,40 @@ const navMenu = () => {
     navigation.innerHTML = navList;
 };
 navMenu();
+
+
+// Scroll to anchor ID using scrollTO event
+
+// select anchor links in nav
+const anchor = document.querySelectorAll('.menu__link');
+
+// listen for clicks on each link
+const anchor1 = anchor[0];
+
+function scrollToFunction(e) {
+    e.preventDefault();
+    const sectionById = document.querySelector('#section1');
+    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
+};
+
+anchor1.addEventListener('click', scrollToFunction); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // make section active on scroll
 const sect1 = document.querySelector('#section1');
@@ -92,33 +95,3 @@ if (bound.top <= 0 && bound.bottom >= 0) {
     sect3.classList.remove('your-active-class');
 };
 })
-
-// attempt to refactor above code
-// window.addEventListener('scroll', function (e) {
-//     const sect = document.querySelector(`section[data-nav="${e}"]`);
-//     // const bound = sect.getBoundingClientRect();
-//     console.log(e);
-//     // if (bound.top <= 0 && bound.bottom >= 0) {
-//     //     sect.classList.add('your-active-class');
-//     // } else {
-//     //     sect.classList.remove('your-active-class');
-//     // };
-// });
-
-
-
-
-
-// Scroll to anchor ID using scrollTO event
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
