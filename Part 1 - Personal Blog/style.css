@@ -1,5 +1,7 @@
 /* base styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto&display=swap');
+@import "footer.css";
+@import "top-nav.css";
 
 * {
     box-sizing: border-box;
