@@ -208,6 +208,18 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+.align-left {
+    float: left;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.align-right {
+    float: right;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
