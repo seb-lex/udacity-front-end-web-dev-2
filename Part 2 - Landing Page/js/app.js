@@ -17,7 +17,7 @@ const links = [
 
 ul.innerHTML = links.map(link => `<li><a class="menu__link" href=${link.id}>${link.text}</a></li>`); 
 
-// build the nav
+// build nav
 const navMenu = () => {
     let navList = '';
 
@@ -32,37 +32,31 @@ navMenu();
 
 
 // Scroll to anchor ID using scrollTO event
-
-// select anchor links in nav
 const anchor = document.querySelectorAll('.menu__link');
-
-// listen for clicks on each link
 const anchor1 = anchor[0];
+const anchor2 = anchor[1];
+const anchor3 = anchor[2];
 
-function scrollToFunction(e) {
+function scrollToFunction1(e) {
     e.preventDefault();
     const sectionById = document.querySelector('#section1');
     window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
 };
+anchor1.addEventListener('click', scrollToFunction1); 
 
-anchor1.addEventListener('click', scrollToFunction); 
+function scrollToFunction2(e) {
+    e.preventDefault();
+    const sectionById = document.querySelector('#section2');
+    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
+};
+anchor2.addEventListener('click', scrollToFunction2); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function scrollToFunction3(e) {
+    e.preventDefault();
+    const sectionById = document.querySelector('#section3');
+    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
+};
+anchor3.addEventListener('click', scrollToFunction3); 
 
 // make section active on scroll
 const sect1 = document.querySelector('#section1');
