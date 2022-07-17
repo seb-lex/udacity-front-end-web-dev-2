@@ -57,6 +57,14 @@ function scrollToFunction3(e) {
     window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
 };
 anchor3.addEventListener('click', scrollToFunction3); 
+const anchors = document.querySelectorAll('.menu__link');
+for (let i = 0; i < anchors.length; i++) {
+    function scroll(e) {
+        e.preventDefault();
+        window.scrollTo({ top: sections[i].offsetTop, left: 0, behavior: 'smooth' });
+    }
+    anchors[i].addEventListener('click', scroll);
+}
 
 // make section active on scroll
 const sect1 = document.querySelector('#section1');
