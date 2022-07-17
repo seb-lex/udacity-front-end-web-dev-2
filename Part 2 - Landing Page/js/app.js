@@ -97,3 +97,14 @@ if (bound.top <= 0 && bound.bottom >= 0) {
     sect3.classList.remove('your-active-class');
 };
 })
+for (let i = 0; i < sections.length; i++) {
+    function handleActive() {
+    const bound = sections[i].getBoundingClientRect();
+    if (bound.top <= 0 && bound.bottom >= 0) {
+    sections[i].classList.add('your-active-class');
+    } else {
+    sections[i].classList.remove('your-active-class');
+    };
+};    
+window.addEventListener('scroll', handleActive);
+}
