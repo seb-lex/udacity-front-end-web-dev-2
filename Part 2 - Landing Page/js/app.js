@@ -30,33 +30,7 @@ const navMenu = () => {
 };
 navMenu();
 
-
 // Scroll to anchor ID using scrollTO event
-const anchor = document.querySelectorAll('.menu__link');
-const anchor1 = anchor[0];
-const anchor2 = anchor[1];
-const anchor3 = anchor[2];
-
-function scrollToFunction1(e) {
-    e.preventDefault();
-    const sectionById = document.querySelector('#section1');
-    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
-};
-anchor1.addEventListener('click', scrollToFunction1); 
-
-function scrollToFunction2(e) {
-    e.preventDefault();
-    const sectionById = document.querySelector('#section2');
-    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
-};
-anchor2.addEventListener('click', scrollToFunction2); 
-
-function scrollToFunction3(e) {
-    e.preventDefault();
-    const sectionById = document.querySelector('#section3');
-    window.scrollTo({ top: sectionById.offsetTop, left: 0, behavior: 'smooth' });
-};
-anchor3.addEventListener('click', scrollToFunction3); 
 const anchors = document.querySelectorAll('.menu__link');
 for (let i = 0; i < anchors.length; i++) {
     function scroll(e) {
@@ -67,44 +41,14 @@ for (let i = 0; i < anchors.length; i++) {
 }
 
 // make section active on scroll
-const sect1 = document.querySelector('#section1');
-const sect2 = document.querySelector('#section2');
-const sect3 = document.querySelector('#section3');
-
-window.addEventListener('scroll', () => {
-    const bound = sect1.getBoundingClientRect();
-if (bound.top <= 0 && bound.bottom >= 0) {
-    sect1.classList.add('your-active-class');
-} else {
-    sect1.classList.remove('your-active-class');
-};
-})
-
-window.addEventListener('scroll', () => {
-    const bound = sect2.getBoundingClientRect();
-if (bound.top <= 0 && bound.bottom >= 0) {
-    sect2.classList.add('your-active-class');
-} else {
-    sect2.classList.remove('your-active-class');
-};
-})
-
-window.addEventListener('scroll', () => {
-    const bound = sect3.getBoundingClientRect();
-if (bound.top <= 0 && bound.bottom >= 0) {
-    sect3.classList.add('your-active-class');
-} else {
-    sect3.classList.remove('your-active-class');
-};
-})
 for (let i = 0; i < sections.length; i++) {
-    function handleActive() {
-    const bound = sections[i].getBoundingClientRect();
-    if (bound.top <= 0 && bound.bottom >= 0) {
-    sections[i].classList.add('your-active-class');
-    } else {
-    sections[i].classList.remove('your-active-class');
-    };
-};    
-window.addEventListener('scroll', handleActive);
+        function handleActive() {
+        const bound = sections[i].getBoundingClientRect();
+        if (bound.top <= 0 && bound.bottom >= 0) {
+        sections[i].classList.add('your-active-class');
+        } else {
+        sections[i].classList.remove('your-active-class');
+        };
+    };    
+    window.addEventListener('scroll', handleActive);
 }
